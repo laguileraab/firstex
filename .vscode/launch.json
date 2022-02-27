@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FirstexApplication<firstex>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.avangenio.firstex.FirstexApplication",
+            "projectName": "firstex",
+            "args": ""
+        }
+    ]
+}
