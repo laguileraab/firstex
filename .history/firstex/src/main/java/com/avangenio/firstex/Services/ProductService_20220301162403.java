@@ -61,9 +61,16 @@ public class ProductService {
 
         if (filter.contains("-")) {
             String[] range = filter.split("-");
+            double[] _double;
+
+            _double = new double[range.length];
+
+            for (int i = 0; i < range.length; i++) {
+                _double[i] = Double.parseDouble(range[i]);
+            }
             productRepository.findAll().forEach((product) -> {
-                if (product.getPrice() >= Double.parseDouble(range[0])
-                        && product.getPrice() <= Double.parseDouble(range[1])) {
+                if (product.getPrice() <= Double.parseDouble(range[0])
+                        && product.getPrice() >= Double.parseDouble(range[1])) {
                     products.add(product);
                 }
             });

@@ -88,17 +88,15 @@ public class RestAPIProduct {
     public List<Product> listProducts(@PathVariable String filterType, @PathVariable String filter) {
         switch (filterType) {
             case "section":
-                return productService.getProductByFilterSection(Integer.parseInt(filter));
+                // return productService.getProductByFilterSection(Integer.parseInt(filter));
             case "lot":
                 return productService.getProductByFilterLot(filter);
             case "fragile":
                 return productService.getProductByFilterFragile(Boolean.valueOf(filter.toUpperCase()));
             case "color":
                 return productService.getProductByFilterColor(filter.toLowerCase());
-                case "quantity":
-                return productService.getProductByFilterQuantity(Integer.parseInt(filter));
             case "price":
-                return productService.getProductByFilterPrice(filter);
+                // return productService.getProductByFilterPrice(filter);
             case "envelop":
                 return productService.getProductByFilterEnvelop(
                         EnvelopType.valueOf(filter.substring(0, 1).toUpperCase() + filter.substring(1).toLowerCase()));

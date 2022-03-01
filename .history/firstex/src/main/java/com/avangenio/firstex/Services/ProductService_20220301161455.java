@@ -62,8 +62,8 @@ public class ProductService {
         if (filter.contains("-")) {
             String[] range = filter.split("-");
             productRepository.findAll().forEach((product) -> {
-                if (product.getPrice() >= Double.parseDouble(range[0])
-                        && product.getPrice() <= Double.parseDouble(range[1])) {
+                if (product.getPrice() <= Double.parseDouble(range[0])
+                        && product.getPrice() >= Double.parseDouble(range[1])) {
                     products.add(product);
                 }
             });
@@ -84,7 +84,7 @@ public class ProductService {
 
     public List<Product> getProductByFilterSection(int filter) throws NoSuchElementException {
         List<Product> products = new ArrayList<Product>();
-        if (sectionRepository.findById(filter).isEmpty()) {
+        if(sectionRepository.findById(filter).isEmpty()){
             throw new NoSuchElementException("Section not found!");
         }
         sectionRepository.findById(filter).get().getProducts().forEach((product) -> {

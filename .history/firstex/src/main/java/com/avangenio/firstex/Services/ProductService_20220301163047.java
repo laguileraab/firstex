@@ -62,7 +62,7 @@ public class ProductService {
         if (filter.contains("-")) {
             String[] range = filter.split("-");
             productRepository.findAll().forEach((product) -> {
-                if (product.getPrice() >= Double.parseDouble(range[0])
+                if (product.getPrice() => Double.parseDouble(range[0])
                         && product.getPrice() <= Double.parseDouble(range[1])) {
                     products.add(product);
                 }

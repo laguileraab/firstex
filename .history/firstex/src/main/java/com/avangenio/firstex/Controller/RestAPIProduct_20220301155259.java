@@ -95,10 +95,8 @@ public class RestAPIProduct {
                 return productService.getProductByFilterFragile(Boolean.valueOf(filter.toUpperCase()));
             case "color":
                 return productService.getProductByFilterColor(filter.toLowerCase());
-                case "quantity":
-                return productService.getProductByFilterQuantity(Integer.parseInt(filter));
             case "price":
-                return productService.getProductByFilterPrice(filter);
+                // return productService.getProductByFilterPrice(filter);
             case "envelop":
                 return productService.getProductByFilterEnvelop(
                         EnvelopType.valueOf(filter.substring(0, 1).toUpperCase() + filter.substring(1).toLowerCase()));
