@@ -59,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/signup").permitAll()
                 .antMatchers("/signin").permitAll()
-                .antMatchers("/h2-ui/**").anonymous()  //h2-console for H2 just for Debug
+                .antMatchers("/h2-ui").permitAll()  //h2-console for H2 just for Debug
                 .anyRequest().authenticated()
                 .and().headers().frameOptions().sameOrigin();
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
