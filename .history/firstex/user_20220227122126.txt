@@ -1,0 +1,6 @@
+{
+"username":"avangenio",
+"email":"admin@avangenio.com",
+"password":"supersecurepassword",
+"role":["admin","user"]
+}
