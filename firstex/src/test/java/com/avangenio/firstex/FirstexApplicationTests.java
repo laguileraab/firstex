@@ -8,6 +8,6 @@ class FirstexApplicationTests {
 
 	@Test
 	void contextLoads() {
-	}
 
+	}
 }
