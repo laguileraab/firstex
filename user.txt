@@ -1,0 +1,13 @@
+{
+"username":"admin",
+"email":"admin@avangenio.com",
+"password":"supersecurepassword",
+"role":["admin"]
+}
+
+{
+"username":"operario",
+"email":"operario@avangenio.com",
+"password":"supersecretpassword",
+"role":["operator"]
+}
