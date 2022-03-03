@@ -86,7 +86,7 @@ public class RestAPIProduct {
 
     @GetMapping(value = "/list/products/{filterType}/{filter}")
     public List<Product> listProducts(@PathVariable String filterType, @PathVariable String filter) {
-        switch (filterType.toLowerCase().trim()) {
+        switch (filterType.toLowerCase()) {
             case "section":
                 return productService.getProductByFilterSection(Integer.parseInt(filter));
             case "lot":
